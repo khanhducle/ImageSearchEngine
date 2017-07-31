@@ -1,8 +1,8 @@
 import dists
-import cvs
+import csv
 
 class Searcher:
-	def init__(self, dbPath):
+	def __init__(self, dbPath):
 		# store the database path (path to index.csv file)
 		self.dbPath = dbPath
 
@@ -36,7 +36,7 @@ class Searcher:
 	
 		# sort the results, smaller distances (more relevant images)
 		# are at the front of the list
-		results = sorted([(v, k) for (k, v) in resutls.items()])
+		results = sorted([(v, k) for (k, v) in results.items()])
 
 		# return the results
 		return results[:numResults]
